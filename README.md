@@ -26,6 +26,9 @@ On a Mac press: Control, Cmd and Space 🤙🏻
 `npm intall -g gatsby-cli`
 ☝ If it doesnt work run the command with sudo
 
+**Create a Gatsby site.**
+Use the Gatsby CLI to create a new site, specifying the hello-world starter.
+
 `gatsby new gatsby-blog https://github.com/gatsbyjs/gatsby-starter-hello-world`
 - gatsby new: Set up a new Gatsby Project
 - gatsby-blog: project Name
@@ -33,16 +36,7 @@ On a Mac press: Control, Cmd and Space 🤙🏻
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the hello-world starter.
-
-    ```sh
-    # create a new Gatsby site using the hello-world starter
-    gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
-    ```
-
-1.  **Start developing.**
+**Start developing.**
 
     Navigate into your new site’s directory and start it up.
 
@@ -51,7 +45,7 @@ On a Mac press: Control, Cmd and Space 🤙🏻
     gatsby develop
     ```
 
-1.  **Open the source code and start editing!**
+**Open the source code and start editing!**
 
     Your site is now running at `http://localhost:8000`!
 
