@@ -12,6 +12,25 @@ Kick off your project with this hello-world boilerplate. This starter ships with
 
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
+# 😎 My own Readme gatsby-blog Adaptions and Notes
+Set up a Gatsby blog to collect and share experience with frontend stuff
+
+## I follow along this tutorial - big props for Andrew Mead and his amazing tutorial
+🔥https://www.youtube.com/watch?v=8t0vNu2fCCM
+
+### How do you add these 🆒 amazing icons?
+On a Mac press: Control, Cmd and Space 🤙🏻
+
+## The Project Setup
+### Install Gatsby global on (my) Machine
+`npm intall -g gatsby-cli`
+☝ If it doesnt work run the command with sudo
+
+`gatsby new gatsby-blog https://github.com/gatsbyjs/gatsby-starter-hello-world`
+- gatsby new: Set up a new Gatsby Project
+- gatsby-blog: project Name
+- Url: gatsby starter template downloading from github
+
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
