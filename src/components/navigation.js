@@ -9,16 +9,16 @@ const Navigation = () => {
       <nav>
         <ul className={navigationStyles.navList}>
           <li>
-            <Link className={navigationStyles.navItem} to="/">Home</Link>
+            <Link className={navigationStyles.navItem} activeClassName={navigationStyles.activeNavItem} to="/">Home</Link>
           </li>
           <li>
-            <Link className={navigationStyles.navItem} to="/blog">Blog</Link>
+            <Link className={navigationStyles.navItem} activeClassName={navigationStyles.activeNavItem} to="/blog">Blog</Link>
           </li>
           <li>
-            <Link className={navigationStyles.navItem} to="/about">About</Link>
+            <Link className={navigationStyles.navItem} activeClassName={navigationStyles.activeNavItem} to="/about">About</Link>
           </li>
           <li>
-            <Link className={navigationStyles.navItem} to="/contact">Contact</Link>
+            <Link className={navigationStyles.navItem} activeClassName={navigationStyles.activeNavItem} to="/contact">Contact</Link>
           </li>
         </ul>
       </nav>
