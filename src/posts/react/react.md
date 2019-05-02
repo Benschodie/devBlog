@@ -3,6 +3,8 @@ title: "React"
 date: "30. 04. 2019"
 ---
 
+![Pic](./pic.jpg)
+
 A New Blogpost
 
 ## Topics - React
