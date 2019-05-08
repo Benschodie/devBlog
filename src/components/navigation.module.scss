@@ -2,7 +2,7 @@ $navigationColor: rgb(266, 266, 266);
 
 .navigation-wrapper {
   background-color: #5d4954;
-  width: 100vw;
+  width: 100%;
 }
 
 .navigation {
@@ -11,6 +11,10 @@ $navigationColor: rgb(266, 266, 266);
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 768px){
+    width: 100%;
+  }
 }
 
 .logo {
@@ -49,9 +53,39 @@ $navigationColor: rgb(266, 266, 266);
 }
 
 .active-nav-item {
-  // border-bottom: 2px solid $navigationColor;
   background-color: lightcoral;
   &:hover {
     color: $navigationColor;
+  }
+}
+
+.burger {
+
+  display: none;
+
+  div {
+    width: 25px;
+    height: 2px;
+    background-color: $navigationColor;
+    margin: 5px;
+  }
+
+  &-item {
+
+    &1{
+
+    }
+
+    &2{
+
+    }
+
+    &3{
+
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    display: block;
   }
 }

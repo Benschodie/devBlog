@@ -25,6 +25,11 @@ const Navigation = () => {
             <Link className={navigationStyles.navItem} activeClassName={navigationStyles.activeNavItem} to="/contact">Contact</Link>
           </li>
         </ul>
+        <div className={navigationStyles.burger}>
+          <div className={navigationStyles.burgerItem1}></div>
+          <div className={navigationStyles.burgerItem2}></div>
+          <div className={navigationStyles.burgerItem3}></div>
+        </div>
       </nav>
     </div>
   )
