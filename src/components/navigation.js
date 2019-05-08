@@ -1,12 +1,16 @@
 import React from 'react'
+
 import { Link } from 'gatsby'
 
 import navigationStyles from './navigation.module.scss'
 
 const Navigation = () => {
   return (
-    <div>
-      <nav>
+    <div className={navigationStyles.navigationWrapper}>
+      <nav className={navigationStyles.navigation}>
+        <div className= {navigationStyles.logo}>
+          <h2>Life of a Noob</h2>
+        </div>
         <ul className={navigationStyles.navList}>
           <li>
             <Link className={navigationStyles.navItem} activeClassName={navigationStyles.activeNavItem} to="/">Home</Link>
