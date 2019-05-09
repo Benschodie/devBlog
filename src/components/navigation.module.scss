@@ -1,8 +1,16 @@
+@import '../styles/mixins.scss';
+
 $navigationColor: rgb(266, 266, 266);
+$mobile: 768px;
 
 .navigation-wrapper {
   background-color: #5d4954;
   width: 100%;
+
+  @include breakpoint($mobile) {
+    height: 8vh;
+    display: flex;
+  }
 }
 
 .navigation {
@@ -14,6 +22,7 @@ $navigationColor: rgb(266, 266, 266);
 
   @media screen and (max-width: 768px){
     width: 100%;
+    padding: 1rem;
   }
 }
 
@@ -44,8 +53,11 @@ $navigationColor: rgb(266, 266, 266);
   list-style-type: none;
   margin: 0;
   padding: 1rem 0;
-
   display: flex;
+
+  @include breakpoint($mobile){
+    display: none;
+  }
 
   li {
     margin-bottom: 0;
@@ -85,7 +97,7 @@ $navigationColor: rgb(266, 266, 266);
     }
   }
 
-  @media screen and (max-width: 768px){
+  @include breakpoint($mobile){
     display: block;
   }
 }
