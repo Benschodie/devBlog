@@ -2,9 +2,10 @@
 
 $navigationColor: rgb(266, 266, 266);
 $mobile: 768px;
+$navigaitionBgColor: #5d4954;
 
 .navigation-wrapper {
-  background-color: #5d4954;
+  background-color: $navigaitionBgColor;
   width: 100%;
 
   @include breakpoint($mobile) {
@@ -56,7 +57,16 @@ $mobile: 768px;
   display: flex;
 
   @include breakpoint($mobile){
-    display: none;
+    position: absolute;
+    height: 92vh;
+    width: 80vw;
+    right: 0;
+    top: 8vh;
+    background-color: $navigaitionBgColor;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateX(100%);
   }
 
   li {
