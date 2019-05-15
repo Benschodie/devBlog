@@ -17,7 +17,7 @@ export const query = graphql`
   }
 `
 
-const Blog = (props) => {
+const Blog = props => {
   const options = {
     renderNode: {
       "embedded-asset-block": (node) => {
