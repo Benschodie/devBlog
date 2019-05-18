@@ -1,0 +1,117 @@
+@import '../styles/mixins.scss';
+@import '../styles/settings.scss';
+
+
+
+.navigation {
+  background-color: $navigaitionBgColor;
+  width: 100%;
+
+  @include breakpoint($mobile) {
+    height: 8vh;
+    display: flex;
+  }
+
+  // @media screen and (max-width: 768px){
+  //   width: 100%;
+  //   padding: 1rem;
+  // }
+
+  &__wrapper {
+  width: 750px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+    @include breakpoint ($mobile) {
+      justify-content: space-around;
+    }
+  }
+
+  &__logo {
+    color: $navigationColor;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    @include breakpoint($mobile) {
+      display: none;
+    }
+  }
+
+  &__item {
+    color: $navigationColor;
+    font-size: .9rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-right: 1.3rem;
+    text-decoration: none;
+
+    &:hover {
+      color: $navigationHover;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 1rem 0;
+    display: flex;
+
+    // @include breakpoint($mobile){
+    //   position: absolute;
+    //   height: 92vh;
+    //   width: 80vw;
+    //   right: 0;
+    //   top: 8vh;
+    //   background-color: $navigaitionBgColor;
+    //   flex-direction: column;
+    //   justify-content: space-around;
+    //   align-items: center;
+    //   transform: translateX(100%);
+    // }
+
+    li {
+      margin-bottom: 0;
+    }
+  }
+
+  .active-navigation__item {
+    background-color: lightcoral;
+    &:hover {
+      color: $navigationColor;
+    }
+  }
+}
+
+.burger {
+
+  display: none;
+
+  div {
+    width: 25px;
+    height: 2px;
+    background-color: $navigationColor;
+    margin: 5px;
+  }
+
+  &-item {
+
+    &1{
+
+    }
+
+    &2{
+
+    }
+
+    &3{
+
+    }
+  }
+}
