@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 import { Link } from 'gatsby'
 
-import navigationStyles from './navigation.module.scss'
+import './navigation.scss'
 
 
 class Navigation extends Component {
@@ -20,29 +20,29 @@ class Navigation extends Component {
 
   render() {
   return (
-    <div className={navigationStyles.navigationWrapper}>
-      <nav className={navigationStyles.navigation}>
-        <div className= {navigationStyles.logo}>
+    <div className="navigation">
+      <nav className="navigation__wrapper">
+        <div className="navigation__logo">
           <h2>Life of a Noob</h2>
         </div>
-        <ul className={navigationStyles.navList}>
+        <ul className="navigation__list">
           <li>
-            <Link className={navigationStyles.navItem} activeClassName={navigationStyles.activeNavItem} to="/">Home</Link>
+            <Link className="navigation__item" activeClassName="active-navigation__item" to="/">Home</Link>
           </li>
           <li>
-            <Link className={navigationStyles.navItem} activeClassName={navigationStyles.activeNavItem} to="/blog">Blog</Link>
+            <Link className="navigation__item" activeClassName="active-navigation__item" to="/blog">Blog</Link>
           </li>
           <li>
-            <Link className={navigationStyles.navItem} activeClassName={navigationStyles.activeNavItem} to="/about">About</Link>
+            <Link className="navigation__item" activeClassName="active-navigation__item" to="/about">About</Link>
           </li>
           <li>
-            <Link className={navigationStyles.navItem} activeClassName={navigationStyles.activeNavItem} to="/contact">Contact</Link>
+            <Link className="navigation__item" activeClassName="active-navigation__item" to="/contact">Contact</Link>
           </li>
         </ul>
-        <div onClick={this.toggleNavigation} className={navigationStyles.burger}>
-          <div className={navigationStyles.burgerItem1}></div>
-          <div className={navigationStyles.burgerItem2}></div>
-          <div className={navigationStyles.burgerItem3}></div>
+        <div onClick={this.toggleNavigation} className="burger">
+          <div className="burger-item-1"></div>
+          <div className="burger-item-2"></div>
+          <div className="burger-item-3"></div>
         </div>
       </nav>
     </div>
