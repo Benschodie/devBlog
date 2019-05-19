@@ -9,14 +9,19 @@ class Navigation extends Component {
 
  constructor(props) {
   super(props);
-  this.setState = {isToggleOn: false}
+  this.state = { clicked: true };
+  // Hint: bind this to the function or use arrow function
+  // this.toggleNavigation = this.toggleNavigation.bind(this);
  }
 
- toggleNavigation () {
-  this.setState(state => ({
-    isToggleOn: !state.isToggleOn
-  }));
-}
+ toggleNavigation = e => {
+  this.setState({ clicked: !this.state.clicked });
+
+  const navLinks = document.querySelectorAll('.navigation__list li');
+   navLinks.forEach((link, index) => {
+     link.style.animation = `navLinkFade 0.5s forwards ${index / 7 + 0.5}s`;
+   })
+ }
 
   render() {
   return (
@@ -25,7 +30,7 @@ class Navigation extends Component {
         <div className="navigation__logo">
           <h2>Life of a Noob</h2>
         </div>
-        <ul className="navigation__list">
+        <ul className={this.state.clicked ? "navigation__list" : "navigation__list navigation__list--isOpen"}>
           <li>
             <Link className="navigation__item" activeClassName="active-navigation__item" to="/">Home</Link>
           </li>
