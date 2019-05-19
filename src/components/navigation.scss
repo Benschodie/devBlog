@@ -20,8 +20,7 @@
   align-items: center;
 
     @include breakpoint ($mobile) {
-      justify-content: flex-end;
-      margin-right: 5vw;
+      justify-content: space-around;
     }
   }
 
@@ -33,10 +32,6 @@
 
     h2 {
       margin-bottom: 0;
-    }
-
-    @include breakpoint($mobile) {
-      display: none;
     }
   }
 
@@ -108,22 +103,20 @@
     height: 2px;
     background-color: $navigationColor;
     margin: 5px;
+    transition: all 0.3s ease;
   }
+}
 
-  &-item {
+.toggle .burger-item-1 {
+  transform: rotate(-45deg) translate(-4px, 6px);
+}
 
-    &1{
+.toggle .burger-item-2 {
+  opacity: 0;
+}
 
-    }
-
-    &2{
-
-    }
-
-    &3{
-
-    }
-  }
+.toggle .burger-item-3 {
+  transform: rotate(45deg) translate(-4px, -6px);
 }
 
 @keyframes navLinkFade {

@@ -14,13 +14,22 @@ class Navigation extends Component {
   // this.toggleNavigation = this.toggleNavigation.bind(this);
  }
 
- toggleNavigation = e => {
+ animateMobileNavigation = e => {
+  // Toggle Navigation
   this.setState({ clicked: !this.state.clicked });
 
+  // Animate Links
   const navLinks = document.querySelectorAll('.navigation__list li');
    navLinks.forEach((link, index) => {
-     link.style.animation = `navLinkFade 0.5s forwards ${index / 7 + 0.5}s`;
-   })
+     if (link.style.animation) {
+       link.style.animation = '';
+     } else {
+       link.style.animation = `navLinkFade 0.5s forwards ${index / 7 + 0.3}s`;
+     }
+   });
+   //Burger Animation
+   const burger = document.querySelector('.burger');
+   burger.classList.toggle('toggle')
  }
 
   render() {
@@ -44,7 +53,7 @@ class Navigation extends Component {
             <Link className="navigation__item" activeClassName="active-navigation__item" to="/contact">Contact</Link>
           </li>
         </ul>
-        <div onClick={this.toggleNavigation} className="burger">
+        <div onClick={this.animateMobileNavigation} className="burger">
           <div className="burger-item-1"></div>
           <div className="burger-item-2"></div>
           <div className="burger-item-3"></div>
